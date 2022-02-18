@@ -28,7 +28,7 @@ sidebar:
     goodreads: 
     pdf: http://www.africau.edu/images/default/sample.pdf
 
-    Research Interests:
+    Interests:
       - item: Survival Analysis
         link:
 
@@ -37,23 +37,14 @@ sidebar:
 
       - item: ML/DL
         link:
-
-    languages:
-      - idiom: 
-        level: 
-
-      - idiom: 
-        level: 
         
 career-profile:
     title: Career Profile
     summary: |
-      안녕하세요, consectetuer
-      adipiscing elit. You can [download this free resume/CV template here]().
-      Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu.
-      Second paragraph if required.
+      WELCOME!
+      I am an graduate student in the Department of Statistics at Chung-Ang University.
+      My research interest is the development and application of statistical methods including survival analysis, biostatistics, and Machine Learning.
+
 education:
     - degree: MSc in Statistics
       university: Chung-Ang University
@@ -101,21 +92,21 @@ experiences:
 projects:
     title: Projects
     intro: >
-      You can list your side projects or open source libraries in this
-      section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+      I collaborate with researchers in various fields such as medicine, epidemiology, business administration, and economics.
     assignments:
-      - title: Risk of metabolic and cardiovascular disease after surgery for thyroid cancer patients using the National Health Insurance Service cohort data
+      - title: Risk of metabolic and cardiovascular disease after surgery for thyroid cancer patients using the NHIS data
         link: "#hook"
-        time: 2014 - 2015
-        tagline: "A responsive website template designed to help startups promote, market and sell their products."
+        tagline: "2021 - Present"
+      - title: Study for relationship between levodopa use and freezing of gait in Parkinson Disease
+        link: "#hook"
+        tagline: "2021 - Present"
+      - title: Study on Success Factors of Startups with KRW 100 Billion in Revenue Using Negative Binomial Regression Model
+        link: "#hook"
+        tagline: "2021 - 2022"
 
 publications:
     title: Publications
-    intro: |
-      You can list your publications in this section. Lorem ipsum dolor sit
-      amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-      bibendum fringilla a eu lectus.
+    intro: 
     papers:
       - title: Comparative Analysis Report on the Performance of the Top 1% Paper for Citation
         link: "https://www.nrf.re.kr/cms/board/library/view?menu_no=419&o_menu_no=&page=1&nts_no=120460&nts_cat=&search_type=NTS_TITLE&search_keyword=%ED%94%BC%EC%9D%B8%EC%9A%A9&nts_cat="
@@ -142,6 +133,9 @@ skills:
 
       - name: SQL
         level: 75%
+        
+Certificate:
+
 
 footer: >
     Jinmo Kang
