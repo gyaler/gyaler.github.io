@@ -43,7 +43,7 @@ sidebar:
         link: "https://venture.or.kr/#/home/bizNotice/h020101D/8645/1/1"
     
     languages:
-      - idiom: 데이터 분석 준전문가 (ADsP)
+      - idiom: 데이터 분석 준전문가 - ADsP
         level: 한국데이터산업진흥원
         
       - idiom: 사회조사분석사 2급
@@ -52,7 +52,7 @@ sidebar:
       - idiom: 컴퓨터활용능력 1급
         level: 대한상공회의소
 
-      - idiom: SAS Certified Base Programmer (SCBP)
+      - idiom: SAS Certified Base Programmer - SCBP
         level: SAS  
         
 career-profile:
@@ -61,6 +61,7 @@ career-profile:
       WELCOME!  
       
       I am an graduate student in the Department of Statistics at Chung-Ang University.
+      
       My research interest is the development and application of statistical methods including survival analysis, biostatistics, and Machine Learning.
 
 education:
