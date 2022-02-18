@@ -1,0 +1,22 @@
+{% assign awards = site.data.data.sidebar.awards %}
+{% if awards %}
+<div class="awards-container container-block">
+
+  <h2 class="container-block-title">
+    awards
+  </h2>
+
+  <ul class="list-unstyled awards-list">
+    {% for awards in awards %}
+
+      {% if awards.link %}
+      <li><a href="{{ awards.link }}">{{ awards.item }}</a></li>
+      {% else %}
+      <li>{{ awards.item }}</li>
+      {% endif %}
+
+    {% endfor %}
+  </ul>
+
+</div><!--//awards-->
+{% endif %}
