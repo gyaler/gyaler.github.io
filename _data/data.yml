@@ -145,8 +145,11 @@ certificate:
 
 
 skills:
-    title: Skills &amp; Proficiency
-
+    title: Skills &amp; Cetificate
+    intro: |
+          - Corporate evaluation
+          - Corporate evaluation
+          - Corporate evaluation
     toolset:
       - name: R
         level: 90%
