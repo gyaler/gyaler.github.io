@@ -39,19 +39,27 @@ sidebar:
         link:    
     
     awards:
-      - item: 벤처천억기업 성공요인 분석 소논문 공모전 - 우수상, 벤처기업협회(KOVA, Korea Venture Business Association), 2022
+      - item: 벤처천억기업 성공요인 분석 소논문 공모전 우수상, 벤처기업협회(Korea Venture Business Association), 2022
         link: "https://venture.or.kr/#/home/bizNotice/h020101D/8645/1/1"
     
     languages:
-      - idiom: 벤처천억기업 성공요인 분석 소논문 공모전 - 우수상
-        level: 벤처기업협회(KOVA, Korea Venture Business Association), 2022
+      - idiom: 데이터 분석 준전문가 (ADsP)
+        level: 한국데이터산업진흥원
         
+      - idiom: 사회조사분석사 2급
+        level: 한국산업인력공단
 
+      - idiom: 컴퓨터활용능력 1급
+        level: 대한상공회의소
+
+      - idiom: SAS Certified Base Programmer (SCBP)
+        level: SAS  
         
 career-profile:
     title: Career Profile
     summary: |
-      WELCOME!   |
+      WELCOME!  
+      
       I am an graduate student in the Department of Statistics at Chung-Ang University.
       My research interest is the development and application of statistical methods including survival analysis, biostatistics, and Machine Learning.
 
