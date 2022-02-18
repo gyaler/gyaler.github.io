@@ -37,7 +37,11 @@ sidebar:
 
       - item: ML/DL
         link:    
-        
+    
+    awards:
+      - item: 벤처천억기업 성공요인 분석 소논문 공모전 - 우수상, 벤처기업협회(KOVA, Korea Venture Business Association), 2022
+        link: "https://venture.or.kr/#/home/bizNotice/h020101D/8645/1/1"
+    
     languages:
       - idiom: 벤처천억기업 성공요인 분석 소논문 공모전 - 우수상
         level: 벤처기업협회(KOVA, Korea Venture Business Association), 2022
