@@ -118,22 +118,6 @@ publications:
         authors: 
         conference: 
 
-skills:
-    title: Skills &amp; Proficiency
-
-    toolset:
-      - name: R
-        level: 90%
-
-      - name: SAS
-        level: 85%
-
-      - name: Python
-        level: 80%
-
-      - name: SQL
-        level: 75%
-
 publications:
     title: Awards
     intro: 
@@ -152,10 +136,9 @@ publications:
     title: Certificate
     intro: 
     papers:
-      - title: 벤처천억기업 성공요인 분석 소논문 공모전 - 우수상
-        link: "https://venture.or.kr/#/home/bizNotice/h020101D/8645/1/1"
-        authors: Jinmo Kang, 
-        conference: 벤처기업협회(KOVA, Korea Venture Business Association), 2022
+      - title: ADsP
+        link: 
+        conference: 데이터진흥원, 2022
 
       - title: 
         link: 
@@ -163,6 +146,21 @@ publications:
         conference: 
 
 
+skills:
+    title: Skills &amp; Proficiency
+
+    toolset:
+      - name: R
+        level: 90%
+
+      - name: SAS
+        level: 85%
+
+      - name: Python
+        level: 80%
+
+      - name: SQL
+        level: 75%
 
 footer: >
     Jinmo Kang
