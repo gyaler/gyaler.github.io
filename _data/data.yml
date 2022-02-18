@@ -28,17 +28,7 @@ sidebar:
     goodreads: 
     pdf: http://www.africau.edu/images/default/sample.pdf
     
-    languages:
-      - idiom: English
-        level: Native
-
-      - idiom: French
-        level: Professional
-
-      - idiom: Spanish
-        level: Professional
-        
-    Interests:
+    interests:
       - item: Survival Analysis
         link:
 
@@ -46,7 +36,13 @@ sidebar:
         link:
 
       - item: ML/DL
-        link:
+        link:    
+        
+    languages:
+      - idiom: 벤처천억기업 성공요인 분석 소논문 공모전 - 우수상
+        level: 벤처기업협회(KOVA, Korea Venture Business Association), 2022
+        
+
         
 career-profile:
     title: Career Profile
