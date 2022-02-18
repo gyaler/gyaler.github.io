@@ -52,7 +52,6 @@ career-profile:
     title: Career Profile
     summary: |
       WELCOME!   |
-      
       I am an graduate student in the Department of Statistics at Chung-Ang University.
       My research interest is the development and application of statistical methods including survival analysis, biostatistics, and Machine Learning.
 
@@ -61,24 +60,11 @@ education:
       university: Chung-Ang University
       time: 2021 - 2023
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
     - degree: BSc in Applied Statistics
       university: Chung-Ang University
       time: 2013 - 2020
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+      
 experiences:
     - role: Research Assistant
       time: 2021 - Present
@@ -129,24 +115,8 @@ publications:
         authors: 
         conference: 
 
-
-certificate:
-    title: Certificate
-    intro: 
-    papers:
-      - title: 벤처천억기업 성공요인 분석 소논문 공모전 - 우수상
-        link: "https://venture.or.kr/#/home/bizNotice/h020101D/8645/1/1"
-        authors: Jinmo Kang, Wooseok Jo
-        conference: 벤처기업협회(KOVA, Korea Venture Business Association), 2022
-
-      - title: 
-        link: 
-        authors: 
-        conference: 
-
-
 skills:
-    title: Skills &amp; Cetificate
+    title: Skills &amp; PROFICIENCY
     intro: |
           - Corporate evaluation
           - Corporate evaluation
