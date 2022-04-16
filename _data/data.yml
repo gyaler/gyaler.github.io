@@ -77,11 +77,11 @@ career-profile:
       
       I enjoy collaborating with with researchers in various fields such as medicine, epidemiology, business administration, and economics.
 education:
-    - degree: M.A. in Statistics
+    - degree: M.S. in Statistics
       university: Chung-Ang University
       time: 2021 - Present
       details: |
-    - degree: B.A. in Applied Statistics and Economics (Double Major)
+    - degree: B.S. in Applied Statistics and Economics (Double Major)
       university: Chung-Ang University
       time: 2013 - 2020
       details: |
@@ -143,14 +143,14 @@ skills:
       - name: R
         level: 90%
 
-      - name: SAS
-        level: 85%
-
       - name: Python
         level: 80%
 
+      - name: SAS
+        level: 80%
+
       - name: SQL
-        level: 75%
+        level: 80%
 
 footer: >
     Copyright (c) 2021 Jinmo Kang. All rights reserved
