@@ -39,6 +39,9 @@ sidebar:
         link:    
     
     awards:
+      - item: 제7기 의료정보 분석 전문가 심화과정 팀 프로젝트 '우수상' - 보건복지부·서울아산병원 (2022)
+        link: 
+        
       - item: 벤처천억기업 분석 공모전 '우수상' - 벤처기업협회 (2022)
         link: "https://venture.or.kr/#/home/bizNotice/h020101D/8645/1/1"
         
@@ -110,17 +113,33 @@ experiences:
 projects:
     title: Projects
     assignments:
+      - title: Total cholesterol variabilityand risk of Cataract
+        link: 
+        tagline: "Jul 2022 - Aug 2022"
+        
+      - title: Leaf area forecasting Using CNN
+        link: 
+        tagline: "Apr 2022 - Jun 2022"
+        
+      - title: Prevalence and risk of Graves’ orbitopathy in Thyroid disease
+        link: 
+        tagline: "Mar 2022 - Sep 2022"
+        
+      - title: Development of dysthyroid ophthalmopathy after thyroid cancer: based on a 14-year nationwide cohort data in South Korea
+        link: 
+        tagline: "Mar 2022 - Aug 2022"
+    
       - title: Study on Success Factors of Startups with KRW 100 Billion in Revenue Using Negative Binomial Regression Model
         link: "https://venture.or.kr/#/home/bizNotice/h020101D/8645/1/1"
         tagline: "Nov 2021 - Feb 2022"
         
       - title: Study for relationship between levodopa use and freezing of gait in Parkinson Disease
         link: 
-        tagline: "Aug 2021 - Present"
+        tagline: "Aug 2021 - Mar 2022"
         
       - title: Risk of metabolic and cardiovascular disease after surgery for thyroid cancer patients using the NHIS data
         link: 
-        tagline: "Jul 2021 - Present"
+        tagline: "Jul 2021 - Feb 2022"
 
 
 
