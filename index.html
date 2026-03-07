@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="강진모 데이터 사이언티스트 포트폴리오 - LLM 개인화, 추천 시스템, 인과 추론" />
+  <meta name="description" content="강진모 데이터 사이언티스트 포트폴리오 - 요약 페이지" />
   <title>강진모 | Data Scientist Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,11 +19,11 @@
       <a class="brand" href="#top">Jinmo Kang</a>
       <nav class="nav-links">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#gallery">Figures</a>
+        <a href="#snapshot">Project Snapshot</a>
         <a href="#experience">Experience</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
+        <a href="projects.html" target="_blank" rel="noreferrer">Project Details ↗</a>
       </nav>
     </div>
   </header>
@@ -36,287 +36,124 @@
         <span>Jinmo Kang</span>
       </h1>
       <p class="hero-copy">
-        AI 에이전트 초개인화, 추천 시스템, 인과 추론을 실제 서비스에 연결해
-        <strong>증명 가능한 비즈니스 임팩트</strong>를 만드는 데이터 사이언티스트입니다.
+        AI 에이전트 초개인화, 추천 시스템, 인과 추론 기반 의사결정을 실제 제품에 연결해
+        <strong>측정 가능한 비즈니스 임팩트</strong>를 만드는 데이터 사이언티스트입니다.
       </p>
       <div class="hero-tags">
-        <span>#DataScience</span>
         <span>#LLM_Personalization</span>
-        <span>#CausalAI</span>
         <span>#Recommendation</span>
+        <span>#CausalAI</span>
+        <span>#Production_ML</span>
       </div>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="mailto:gyaler09@gmail.com">이메일 보내기</a>
+        <a class="btn btn-primary" href="projects.html" target="_blank" rel="noreferrer">프로젝트 상세 보기</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/gyaler/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
       <ul class="quick-info">
         <li><span>Phone</span><a href="tel:01084060272">010-8406-0272</a></li>
         <li><span>Email</span><a href="mailto:gyaler09@gmail.com">gyaler09@gmail.com</a></li>
-        <li><span>Location</span><strong>Seoul, South Korea</strong></li>
+        <li><span>Current Role</span><strong>LG Uplus · Data Scientist</strong></li>
       </ul>
     </section>
 
     <section id="about" class="section reveal">
       <div class="section-head">
         <p>About</p>
-        <h2>연구와 상용화 사이를 연결합니다</h2>
+        <h2>연구 성과를 상용 서비스로 전환합니다</h2>
       </div>
       <div class="grid two">
         <article class="card">
-          <h3>핵심 방향</h3>
-          <p>
-            다양한 연구 성과와 상용 배포 경험을 바탕으로, 복잡한 실데이터 속에서 서비스 가능한 해법을 찾고
-            실사용 환경에서 재현 가능한 성능을 만들어냅니다.
-          </p>
-        </article>
-        <article class="card">
-          <h3>관심 영역</h3>
-          <p>
-            LLM 기반 개인화, 추천·타겟팅 시스템, 인과 추론 기반 의사결정 최적화에 집중하고 있습니다.
-            모델 성능뿐 아니라 조직이 신뢰하고 실행할 수 있는 형태의 결과를 지향합니다.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects" class="section reveal">
-      <div class="section-head">
-        <p>Projects</p>
-        <h2>projects.md 기반 주요 프로젝트</h2>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card">
-          <a class="media-frame" href="figures/iclr2026_figure1.png" target="_blank" rel="noreferrer">
-            <img src="figures/iclr2026_figure1.png" alt="PersonaPlugin 개요 도식" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="badge">LG유플러스 · 2024.11 ~ 진행 중</p>
-            <h3>익시오 검색 개인화 및 고객 페르소나 생성</h3>
-            <ul>
-              <li>통화/앱/위치 데이터를 결합한 고객 페르소나 기반 개인화 검색/생성 구조 설계</li>
-              <li>에이전트 서비스 사용자 맥락 반영을 위한 검색/생성 로직 최적화</li>
-              <li>진행 중 프로젝트로 서비스 확장 및 성능 고도화 단계</li>
-            </ul>
-            <div class="inline-figures">
-              <a href="figures/iclr2026_figure2.png" target="_blank" rel="noreferrer"><img src="figures/iclr2026_figure2.png" alt="PersonaPlugin 상세 구성" loading="lazy" /></a>
-              <a href="figures/iclr2026_figure3.png" target="_blank" rel="noreferrer"><img src="figures/iclr2026_figure3.png" alt="PersonaPlugin 결과 시각화" loading="lazy" /></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="media-frame" href="figures/iptv_mfa_rec_0.jpg" target="_blank" rel="noreferrer">
-            <img src="figures/iptv_mfa_rec_0.jpg" alt="AI 큐레이션 구독상품 추천 화면" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="badge">LG유플러스 · 2024.05 ~ 2024.12</p>
-            <h3>AI 큐레이션 - 구독상품 추천</h3>
-            <ul>
-              <li>실시간 채널/VOD 시청 이력을 통합한 RFM 피처 스토어 구축</li>
-              <li>XAI 기반으로 추천 사유가 담긴 개인화 소구 문구 자동 생성</li>
-              <li>CTR/매출 지표 개선 및 IEEE BigData 2024 워크숍 채택</li>
-            </ul>
-            <div class="inline-figures">
-              <a href="figures/iptv_mfa_rec_1.jpg" target="_blank" rel="noreferrer"><img src="figures/iptv_mfa_rec_1.jpg" alt="AI 큐레이션 추천 예시 1" loading="lazy" /></a>
-              <a href="figures/iptv_mfa_rec_2.jpg" target="_blank" rel="noreferrer"><img src="figures/iptv_mfa_rec_2.jpg" alt="AI 큐레이션 추천 예시 2" loading="lazy" /></a>
-              <a href="figures/iptv_mfa_rec_3.png" target="_blank" rel="noreferrer"><img src="figures/iptv_mfa_rec_3.png" alt="AI 큐레이션 추천 예시 3" loading="lazy" /></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="media-frame" href="figures/iptv_seg_1.png" target="_blank" rel="noreferrer">
-            <img src="figures/iptv_seg_1.png" alt="홈 SEG별 배너 고도화 결과 화면" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="badge">LG유플러스 · 2024.04 ~ 2024.08</p>
-            <h3>홈 SEG별 배너 고도화</h3>
-            <ul>
-              <li>시청 패턴 기반 세그먼트별 차별화 배너 정책 설계</li>
-              <li>기존 세그먼트 구조를 고도화/다양화하여 선택률 개선</li>
-              <li>상세 진입 PV 및 매출 상승 성과 달성</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="media-frame" href="figures/iptv_churn.png" target="_blank" rel="noreferrer">
-            <img src="figures/iptv_churn.png" alt="IPTV 월정액 해지 예측 분석 도표" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="badge">LG유플러스 · 2023.11 ~ 2024.04</p>
-            <h3>IPTV 월정액 구독상품 해지 예측</h3>
-            <ul>
-              <li>소수 상품 대상 모델을 전체 상품/전체 가입자 대상으로 스케일업</li>
-              <li>XAI 기반 고객별 해지 위험 요인 식별 및 타겟팅 반영</li>
-              <li>해지 검출률 및 LIFT(5) 기준 고성능 모델 확보</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="media-frame" href="figures/iptv_mab.png" target="_blank" rel="noreferrer">
-            <img src="figures/iptv_mab.png" alt="Contextual MAB 적용 결과" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="badge">LG유플러스 PoC · 2023.08 ~ 2023.12</p>
-            <h3>Contextual MAB 기반 홈 패널 리랭킹</h3>
-            <ul>
-              <li>Action별 Context를 반영한 Reward 최적화 구조 설계</li>
-              <li>IPTV 메인 홈에서 고객별 시청 가능성이 높은 지면을 상단 배치</li>
-              <li>기술 적용 전 대비 노출 지표 증가 및 상용 적용 검토</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="media-frame" href="figures/cikm2025_figure1.png" target="_blank" rel="noreferrer">
-            <img src="figures/cikm2025_figure1.png" alt="ATTR 프레임워크 도식" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="badge">Research to Production · 2025</p>
-            <h3>ATTR: 인과 추론 기반 타겟팅 최적화</h3>
-            <ul>
-              <li>단순 예측에서 벗어나 실제 비즈니스 증분(Uplift) 검증 프레임워크 구축</li>
-              <li>모델 신뢰성과 의사결정의 타당성을 동시에 평가하는 절차 설계</li>
-              <li>CIKM 2025 Human-Centric AI 워크숍 채택</li>
-            </ul>
-            <div class="inline-figures two">
-              <a href="figures/cikm2025_figure2.png" target="_blank" rel="noreferrer"><img src="figures/cikm2025_figure2.png" alt="ATTR 실험 결과" loading="lazy" /></a>
-              <a href="figures/ieee2024_2.png" target="_blank" rel="noreferrer"><img src="figures/ieee2024_2.png" alt="추천 실험 보조 도표" loading="lazy" /></a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="grid two compact-cards">
-        <article class="card">
-          <h3>중앙대학교 BLDA LAB</h3>
-          <ul>
-            <li>갑상선 연구, PPMI, 병원 데이터 등 2년간 5개 연구 프로젝트 수행</li>
-            <li>시계열 군집화, 생존분석, 인과 추론, 의료 빅데이터 분석 수행</li>
-            <li>연구실 웹/클라우드/협업 환경 구축 및 연구 템플릿 체계화</li>
+          <h3>핵심 강점</h3>
+          <ul class="plain-list">
+            <li>모델링부터 서비스 배포/실험/지표 검증까지 End-to-End 수행</li>
+            <li>불완전한 실데이터 환경에서 동작하는 실용적 설계</li>
+            <li>조직이 신뢰할 수 있는 인과 기반 의사결정 구조 설계</li>
           </ul>
         </article>
         <article class="card">
-          <h3>대전신용보증재단 · 한국연구재단</h3>
-          <ul>
-            <li>소상공인 경영개선자금 대규모 접수/심사 프로세스 개선</li>
-            <li>지점 사고율 개선을 위한 EDA/생존분석 기반 리스크 진단</li>
-            <li>300p 연구실적 비교분석 보고서 1저자 작성 및 업무 자동화</li>
+          <h3>대표 임팩트</h3>
+          <ul class="plain-list">
+            <li>PersonaPlugin 상용 환경 개인화 성능 24% 향상</li>
+            <li>추천/해지방어 고도화로 CTR/리텐션 개선</li>
+            <li>ICLR 2026, CIKM 2025, IEEE BigData 2024 등 연구 발표</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section id="gallery" class="section reveal">
+    <section id="snapshot" class="section reveal">
       <div class="section-head">
-        <p>Figures</p>
-        <h2>프로젝트 도식 및 결과 이미지</h2>
+        <p>Project Snapshot</p>
+        <h2>메인 페이지에는 요약만 담았습니다</h2>
       </div>
-      <div class="figure-grid">
-        <a class="figure-item" href="figures/iclr2026_figure1.png" target="_blank" rel="noreferrer">
-          <img src="figures/iclr2026_figure1.png" alt="ICLR 2026 Figure 1" loading="lazy" />
-          <span>ICLR 2026 Figure 1</span>
-        </a>
-        <a class="figure-item" href="figures/iclr2026_figure2.png" target="_blank" rel="noreferrer">
-          <img src="figures/iclr2026_figure2.png" alt="ICLR 2026 Figure 2" loading="lazy" />
-          <span>ICLR 2026 Figure 2</span>
-        </a>
-        <a class="figure-item" href="figures/iclr2026_figure3.png" target="_blank" rel="noreferrer">
-          <img src="figures/iclr2026_figure3.png" alt="ICLR 2026 Figure 3" loading="lazy" />
-          <span>ICLR 2026 Figure 3</span>
-        </a>
-        <a class="figure-item" href="figures/cikm2025_figure1.png" target="_blank" rel="noreferrer">
-          <img src="figures/cikm2025_figure1.png" alt="CIKM 2025 Figure 1" loading="lazy" />
-          <span>CIKM 2025 Figure 1</span>
-        </a>
-        <a class="figure-item" href="figures/cikm2025_figure2.png" target="_blank" rel="noreferrer">
-          <img src="figures/cikm2025_figure2.png" alt="CIKM 2025 Figure 2" loading="lazy" />
-          <span>CIKM 2025 Figure 2</span>
-        </a>
-        <a class="figure-item" href="figures/ieee2024_1.png" target="_blank" rel="noreferrer">
-          <img src="figures/ieee2024_1.png" alt="IEEE 2024 Figure 1" loading="lazy" />
-          <span>IEEE 2024 Figure 1</span>
-        </a>
-        <a class="figure-item" href="figures/ieee2024_2.png" target="_blank" rel="noreferrer">
-          <img src="figures/ieee2024_2.png" alt="IEEE 2024 Figure 2" loading="lazy" />
-          <span>IEEE 2024 Figure 2</span>
-        </a>
-        <a class="figure-item" href="figures/iptv_churn.png" target="_blank" rel="noreferrer">
-          <img src="figures/iptv_churn.png" alt="IPTV Churn" loading="lazy" />
-          <span>IPTV Churn Model</span>
-        </a>
-        <a class="figure-item" href="figures/iptv_mab.png" target="_blank" rel="noreferrer">
-          <img src="figures/iptv_mab.png" alt="IPTV Contextual MAB" loading="lazy" />
-          <span>Contextual MAB</span>
-        </a>
-        <a class="figure-item" href="figures/iptv_mfa_rec_0.jpg" target="_blank" rel="noreferrer">
-          <img src="figures/iptv_mfa_rec_0.jpg" alt="IPTV MFA Recommendation 0" loading="lazy" />
-          <span>Subscription Recommendation 0</span>
-        </a>
-        <a class="figure-item" href="figures/iptv_mfa_rec_1.jpg" target="_blank" rel="noreferrer">
-          <img src="figures/iptv_mfa_rec_1.jpg" alt="IPTV MFA Recommendation 1" loading="lazy" />
-          <span>Subscription Recommendation 1</span>
-        </a>
-        <a class="figure-item" href="figures/iptv_mfa_rec_2.jpg" target="_blank" rel="noreferrer">
-          <img src="figures/iptv_mfa_rec_2.jpg" alt="IPTV MFA Recommendation 2" loading="lazy" />
-          <span>Subscription Recommendation 2</span>
-        </a>
-        <a class="figure-item" href="figures/iptv_mfa_rec_3.png" target="_blank" rel="noreferrer">
-          <img src="figures/iptv_mfa_rec_3.png" alt="IPTV MFA Recommendation 3" loading="lazy" />
-          <span>Subscription Recommendation 3</span>
-        </a>
-        <a class="figure-item" href="figures/iptv_seg_1.png" target="_blank" rel="noreferrer">
-          <img src="figures/iptv_seg_1.png" alt="IPTV Segment Banner" loading="lazy" />
-          <span>SEG Banner Optimization</span>
-        </a>
+      <div class="snapshot-grid">
+        <article class="snapshot-card">
+          <p class="badge">2024.11 - Present</p>
+          <h3>익시오 검색 개인화/페르소나 생성</h3>
+          <p>다중 소스 신호 기반 개인화 검색·생성 로직 구축 (진행 중)</p>
+          <a href="projects.html#p-ixio" target="_blank" rel="noreferrer">상세 보기</a>
+        </article>
+        <article class="snapshot-card">
+          <p class="badge">2024.05 - 2024.12</p>
+          <h3>AI 큐레이션 구독상품 추천</h3>
+          <p>RFM 피처 스토어 + XAI 소구 문구 자동 생성</p>
+          <a href="projects.html#p-curation" target="_blank" rel="noreferrer">상세 보기</a>
+        </article>
+        <article class="snapshot-card">
+          <p class="badge">2024.04 - 2024.08</p>
+          <h3>홈 SEG별 배너 고도화</h3>
+          <p>세그먼트 정교화로 상세 진입 PV/매출 개선</p>
+          <a href="projects.html#p-seg" target="_blank" rel="noreferrer">상세 보기</a>
+        </article>
+        <article class="snapshot-card">
+          <p class="badge">2023.11 - 2024.04</p>
+          <h3>IPTV 월정액 해지 예측</h3>
+          <p>전체 상품/전체 가입자 스케일업 + XAI 리스크 요인 분석</p>
+          <a href="projects.html#p-churn" target="_blank" rel="noreferrer">상세 보기</a>
+        </article>
+        <article class="snapshot-card">
+          <p class="badge">2023.08 - 2023.12</p>
+          <h3>Contextual MAB 리랭킹 PoC</h3>
+          <p>홈 패널 노출 최적화로 시청 가능성이 높은 지면 상단 배치</p>
+          <a href="projects.html#p-mab" target="_blank" rel="noreferrer">상세 보기</a>
+        </article>
+        <article class="snapshot-card">
+          <p class="badge">2025</p>
+          <h3>ATTR 프레임워크</h3>
+          <p>Uplift 중심 인과 추론 타겟팅 프레임워크 구축</p>
+          <a href="projects.html#p-attr" target="_blank" rel="noreferrer">상세 보기</a>
+        </article>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="projects.html" target="_blank" rel="noreferrer">프로젝트 상세 페이지 열기</a>
       </div>
     </section>
 
     <section id="experience" class="section reveal">
       <div class="section-head">
         <p>Experience</p>
-        <h2>경력</h2>
+        <h2>경력 요약</h2>
       </div>
       <div class="timeline">
         <article class="timeline-item">
           <div class="timeline-meta">2023.06 - Present</div>
           <div class="timeline-body">
             <h3>LG Uplus · Data Scientist</h3>
-            <p>Technical PM 역할을 병행하며 Personal Agent 개인화 및 추천/타겟팅 시스템을 고도화했습니다.</p>
-            <ul>
-              <li>LLM 기반 개인화 엔진 및 API/Batch 서빙 인프라 구축</li>
-              <li>인과 추론 기반 ATTR 프레임워크로 캠페인 의사결정 체계 정교화</li>
-              <li>추천 모델 고도화 및 XAI 기반 마케팅 문구 생성 파이프라인 적용</li>
-            </ul>
+            <p>개인화 에이전트, 추천, 인과 기반 마케팅 최적화 프로젝트 리딩/수행</p>
           </div>
         </article>
         <article class="timeline-item">
           <div class="timeline-meta">2021.07 - 2023.06</div>
           <div class="timeline-body">
-            <h3>중앙대학교 · Research Assistant (BLDA Lab)</h3>
-            <p>NHIS 100만 명 규모 코호트 기반 분석과 시계열 군집화·인과 추론 연구를 수행했습니다.</p>
-            <ul>
-              <li>갑상선 질환 관련 위험요인 연구(Eye, EJE 등 저널 게재)</li>
-              <li>IPW + Cox 모델링으로 관찰 데이터 편향 제어</li>
-              <li>정밀의료 인사이트 도출을 위한 환자 층화 분석 수행</li>
-            </ul>
+            <h3>중앙대학교 BLDA Lab · Research Assistant</h3>
+            <p>대규모 코호트/의료 데이터 분석, 생존분석, 인과 추론 연구</p>
           </div>
         </article>
         <article class="timeline-item">
           <div class="timeline-meta">2019.08 - 2021.04</div>
           <div class="timeline-body">
             <h3>대전신용보증재단 · 심사역</h3>
-            <p>기업 신용보증 심사 및 정량·정성 데이터 기반 리스크 예측/건전성 관리 업무를 수행했습니다.</p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-meta">2018.08 - 2018.12</div>
-          <div class="timeline-body">
-            <h3>National Research Foundation of Korea · Research Intern</h3>
-            <p>국가별 연구 경쟁력 비교 분석 및 논문 실적 데이터 리포트를 작성했습니다.</p>
+            <p>신용보증 리스크 심사 및 데이터 기반 프로세스 개선</p>
           </div>
         </article>
       </div>
@@ -329,28 +166,16 @@
       </div>
       <div class="pub-list">
         <article class="pub-item">
-          <h3>PersonaPlugin: A Multi-Source Persona Framework for LLM Personalization in Telecommunications</h3>
-          <p>ICLR 2026 Workshop: Agentic AI in the Wild · 2026-03-07</p>
+          <h3>PersonaPlugin (ICLR 2026 Workshop)</h3>
+          <p>LLM 초개인화 프레임워크</p>
         </article>
         <article class="pub-item">
-          <h3>ATTR: An Adaptable and Trustworthy Targeting Recommendation Framework under Real-World Constraints</h3>
-          <p>CIKM 2025 Workshop: Human-Centric AI · 2025-11-14</p>
+          <h3>ATTR (CIKM 2025 Workshop)</h3>
+          <p>인과 추론 기반 타겟팅 프레임워크</p>
         </article>
         <article class="pub-item">
-          <h3>Statin Dose Trajectories and Risk of Graves’ Orbitopathy in Patients with Graves’ Disease Using Clustering Algorithm</h3>
-          <p>Journal of Health Informatics and Statistics · 2025-02-28</p>
-        </article>
-        <article class="pub-item">
-          <h3>A Novel Hybrid Architectures for Overcoming Sparse Data in Subscription Product Recommendation Systems</h3>
-          <p>IEEE BigData 2024 · 2024-12-15</p>
-        </article>
-        <article class="pub-item">
-          <h3>Increased Risk of Diabetes Mellitus and Hyperlipidemia in Patients with Differentiated Thyroid Cancer</h3>
-          <p>European Journal of Endocrinology · 2024-03-27</p>
-        </article>
-        <article class="pub-item">
-          <h3>Sex-Specific Risk Factors Associated With Graves’ Orbitopathy in Korean Patients With Newly Diagnosed Graves’ Disease</h3>
-          <p>Eye · 2023-04-11</p>
+          <h3>IEEE BigData 2024 / Eye 2023 / EJE 2024</h3>
+          <p>추천 시스템 및 의료 통계 연구 다수</p>
         </article>
       </div>
     </section>

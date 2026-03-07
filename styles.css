@@ -258,6 +258,13 @@ h1 span {
   border-radius: var(--radius);
   background: var(--surface-strong);
   padding: 20px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover,
+.pub-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(17, 38, 39, 0.1);
 }
 
 .card h3,
@@ -275,6 +282,41 @@ h1 span {
   color: #0b5c5c;
   font-weight: 700;
   font-size: 0.78rem;
+}
+
+.snapshot-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.snapshot-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-strong);
+  padding: 16px;
+}
+
+.snapshot-card h3 {
+  margin: 8px 0 6px;
+  line-height: 1.35;
+  font-size: 1.03rem;
+}
+
+.snapshot-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.93rem;
+}
+
+.snapshot-card a {
+  margin-top: 9px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .project-grid {
@@ -502,6 +544,10 @@ h1 span {
   .quick-info,
   .grid.two,
   .figure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-grid {
     grid-template-columns: 1fr;
   }
 
