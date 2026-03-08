@@ -86,29 +86,161 @@
 - 데이터 인사이트 도출, ML/DL 기반 예측 등 다양한 Task의 공모전 및 경진대회에서 수상 4회
 - 다양한 도메인 데이터 경험. 데이터 분석 전반의 과정 및 커뮤니케이션 역량 제고
 
-### 수업지원 조교
+---
 
-**주요 역할**
 
-- 기초통계학 및 보험통계학 수업지원 조교 역임. 과제 및 시험 채점, 보조강의, 질문 답변 등의 업무 수행
-- 효율적인 과업 수행을 위해 Excel 함수, 매크로 기능 등을 적극 활용하여 모든 정보를 DB화
+**건강보험공단(NHIS) 빅데이터 활용 갑상선 질환 연구 (2022. 03 - 2023.03)**     [📝 **More Details**](https://www.notion.so/Proj-NHIS-fff89d7d928481c4aa97c33d6ab7ed32?pvs=21)
 
-**결과 및 성과**
+자료   건강보험공단(NHIS) 표본 코호트 데이터
 
-- 적극적인 자동화, 체계화로 업무부담 경감
-- 민감할 수 있는 성적 등에 대하여 학생 민원 및 불만사항 제로 달성
+내용   갑상선 질환 환자의 그레이브스 안병증 영향 탐색 등
 
-### 연구실 체계 확립
+역할   분석과정 전반, Rshiny를 활용한 대시보드 제작, 포스터 및 대면심사 발표
 
-**주요 역할**
+결과   🏆 추계학술대회 포스터 2위 ‘최우수상’ (2022. 11) - 한국보건정보통계학회  [**📎Link**](https://www.koshis.or.kr/bbs/?code=notice)
 
-- 신생 연구실 일원으로서, 연구실 프로젝트를 구조화하고 정리하여 baseline이 될 수 있는 선례를 만듦
-- 연구실 웹페이지와 클라우드, Notion, Github 구축. 연구 템플릿이나 노하우 등 공유의 장 마련
+     📃 논문 공저 참여 (총 3편), 학술지 게재: EYE - Springer Nature  **[**📎Link**](https://www.nature.com/articles/s41433-023-02513-z.epdf?sharing_token=4HaHsHMvl-jEvCQtHPghRtRgN0jAjWel9jnR3ZoTv0NVZAlgPQyrVscrtiC-IbVcz0mz91de-b0N6gXaLrx_Unst4a7u_UG9W6t_x51xtlhpGzHFoHVrY5nYKhMDOX6tlIZxQxjky1oM0_DuGpzUmmUppGshbnZsDYaDZWfvw7M%3D)
 
-**결과 및 성과**
+[[**Proj]** NHIS 갑상선 연구](https://www.notion.so/Proj-NHIS-fff89d7d928481c4aa97c33d6ab7ed32?pvs=21)
 
-- 연구 프로젝트 관리의 효율성 제고. 연구실 구성원간 학술적/친목적 교류 증진
-- 통계학과 내 가장 있기있고 규모있는 연구실 중 하나가 되었음 😁
+
+### 목표
+
+- 건강보험공단의 표본·건강검진 코호트 자료를 활용하였으며, 다양한 통계분석 기법을 적용 및 연구하였습니다.
+- 갑상선 질환 환자를 대상으로 대사 및 심혈관질환의 위험, 그레이브스 안병증의 위험 요인 등을 실증 분석하였습니다.
+
+### 주요 역할
+
+**Data Preprocessing**
+
+- 교수님들과 매주 미팅을 진행하며 연구 디자인에 참여했으며, 데이터 추출부터 전처리까지 주도적으로 작업하였습니다.
+- 건강보험공단 및 중앙대병원 데이터에서 적절한 표본 및 컬럼을 SAS Macro 및 R Foreach문 등을 활용하여 효율적으로 추출하였습니다.
+- rawdata의 특성을 파악하고자 다양한 EDA, 시각화 결과물을 공유하고 능률적인 연구 진행에 기여하였습니다.
+
+
+**Statistical Analysis**
+
+- 연구에 적절한 통계/머신러닝 방법론을 탐색 및 적용하고 결과물을 공유하였습니다.
+- Multiple Imputation과 Time dependent Cox model 선정 및 분석을 통해 교수님들의 의사결정 및 임상적 해석을 도우며, 통계적 견해과 결과물 해석에 기여하였습니다.
+
+
+**Presentation & Communication**
+
+- 매주 미팅을 주도하고, 비전공자 및 교수님들께 시의적절한 설명 및 의견을 제시하였습니다.
+- 한국보건정보통계학회 학술대회에서 포스터를 전시하고 약 300명의 청중 앞에서 연구결과를 발표하였습니다.
+
+### 주요 연구 방법론
+
+- Multiple Imputation (MICE), Propensity score Matching / Weighting
+- Kaplan-Meier estimator, Time-dependent Cox-PH regression model
+- Generalized Linear Model, Machine Learning based model
+
+### 성과 및 의의
+
+**성과**
+
+- 🏆 추계학술대회 포스터 2위 ‘최우수상’ - 한국보건정보통계학회 (2022. 11)  [📎**Link**](https://www.koshis.or.kr/bbs/?code=notice)
+    
+    약 100여 명의 지원자 중 포스터 및 구두발표 심사결과 종합 2위 
+    
+- 📃 공저 참여(3건) 및 학술지 게재
+
+Statin Dose Trajectories and Risk of Graves’ Orbitopathy in Patients with Graves’ Disease Using Clustering Algorithm
+Journal of Health Informatics and Statistics · 2025년 2월 28일
+논문/저서 표시
+비지도 학습 알고리즘을 활용해 100만 명 규모의 의료 빅데이터에서 환자별 약물 복용 궤적(Trajectory)을 시계열적으로 군집화하고, 특정 군집에서의 질환 예방 효과를 데이터 기반으로 입증했습니다.
+
+
+Increased risk of diabetes mellitus and hyperlipidemia in patients with differentiated thyroid cancer
+European Journal of Endocrinology · 2024년 3월 27일
+인구 기반 대규모 국가 코호트 데이터를 활용해 갑상선암 생존자의 당뇨 및 고지혈증 발병 위험을 통계적으로 입증하여, 암 생존자의 장기 대사질환 관리 필요성을 제시했습니다.
+
+
+Sex-specific risk factors associated with graves’ orbitopathy in Korean patients with newly diagnosed graves’ disease
+Eye · 2023년 4월 11일
+논문/저서 표시
+국가건강보험공단(NHIS)의 100만 명 대규모 코호트 데이터를 분석하여, 갑상선 안병증(GO) 발생 위험이 성별에 따라 유의미하게 다름을 통계적으로 입증한 연구입니다.
+
+
+
+**의의**
+
+- 다수의 발표, 회의 진행 경험으로 비전공자와의 원활한 소통 역량을 제고했습니다.
+- 시니어급 의사결정권자에게 명료하게 설명하고 설득하는 방법을 익힐 수 있었습니다.
+
+
+
+
+
+**중소기업 성장단계별 지원 플랫폼 : 테크마루(Tech-마루) (2022. 05 - 2022. 09)**     [📝 **More Details**](https://www.notion.so/Proj-fff89d7d9284810cac9fdf9ff7d947d3?pvs=21)
+
+자료   중소기업 기술통계조사 데이터 등
+
+내용   머신러닝 및 인과추론을 활용한 중소기업 성장단계별 지원 플랫폼 구축 제안
+
+역할   EDA, ML/DL 및 Causal Inference 적용, 인사이트 도출, 대면심사 발표
+
+결과   🏆 공모전 3위 ‘장려상’ (2022. 09) - 중소기업중앙회  [**📎Link**](https://www.kbiz.or.kr/ko/contents/bbs/view.do?seq=153014&mnSeq=207)
+
+[[**Proj]** 중소기업 정책아이디어](https://www.notion.so/Proj-fff89d7d9284810cac9fdf9ff7d947d3?pvs=21)
+
+### 💡 인사이트 발굴
+
+
+**벤처천억기업의 성공요인에 관한 실증분석 (2021. 11 - 2022. 02)**
+
+자료   벤처천억기업 시계열 데이터
+
+내용   포아송/음이항 회귀모형 등 GLM 방법론을 활용한 벤처기업의 성공요인 탐색
+
+역할   데이터 전처리, 모델링 및 결과 해석
+
+결과   🏆 공모전 2위 ‘우수상’ (2022. 02) - 벤처기업협회  [**📎Link**](https://venture.or.kr/#/home/bizNotice/h0203/1/3932/1)
+
+
+**콜레스테롤 변동성과 백내장 발생 간의 연관성 연구 (2022. 06 - 2022. 08)**     [📝 **More Details**](https://www.notion.so/Proj-fff89d7d928481ef9b85fbc8c5ee7cbf?pvs=21)
+
+자료   건강보험공단(NHIS) 건강검진 코호트 데이터
+
+내용   생존분석, 성향점수 매칭 등을 이용한 총 콜레스테롤 변동성과 백내장 발생 간의 연관성 탐색
+
+역할   데이터 전처리, 모델링 및 결과 해석, 대면심사 발표
+
+결과   🏆 프로젝트 2위 ‘우수상’ (2022. 08) - 서울아산병원  [**📎Link**](http://bigdata.amc.seoul.kr/asan/depts/bigdata/K/bbsDetail.do?pageIndex=1&menuId=4319&contentId=269563&searchCondition=&searchKeyword=)
+
+[[**Proj] 아산병원** 의료정보 분석](https://www.notion.so/Proj-fff89d7d928481ef9b85fbc8c5ee7cbf?pvs=21)
+
+
+
+**LG Aimers 스마트 공장의 제품 품질 상태 분류 해커톤 (2023. 01 - 2023. 03)**     [📝 **More Details**](https://www.notion.so/Proj-LG-Aimers-fff89d7d928481bbb216cfa3f7add976?pvs=21)
+
+자료   LG디스플레이 공장 제품 품질 데이터
+
+내용   스마트 공장의 제어 시스템 구축을 위한 제품 품질 분류 AI 모델 개발
+
+역할   EDA, Feature engineering, 모델링 및 시뮬레이션, 결과 비교 등 연구 전반
+
+결과   🏁 예선 통과, 본선 최종 19위   [**📎Link**](https://dacon.io/competitions/official/236080/leaderboard)
+
+[[**Proj]** LG Aimers 해커톤](https://www.notion.so/Proj-LG-Aimers-fff89d7d928481bbb216cfa3f7add976?pvs=21)
+
+
+**Factors affecting Social Media Usage using Propensity score matching and Survival analysis (2022. 03 - 2022. 07)**
+
+자료   정보통신정책연구원(KISDI) 한국미디어패널
+
+내용   성향점수와 생존분석을 활용한 SNS 이용률에 영향을 끼치는 요인 탐색
+
+역할   데이터 전처리, 모델링 및 결과 해석
+
+결과   📃 학술지 게재: 데이터과학연구(11권) - 중앙대학교 데이터과학연구소  [**📎Link**](https://drive.google.com/file/d/1yVwUL_AQlsCNqr2BQIMeRcm5XNZDN9NJ/view)
+
+
+
+
+
+
+
 
 ## 대전신용보증재단
 

@@ -172,6 +172,11 @@ h1 span {
   transition: transform 180ms ease, box-shadow 180ms ease, color 180ms ease;
 }
 
+.btn-sm {
+  padding: 8px 12px;
+  font-size: 0.88rem;
+}
+
 .btn:hover {
   transform: translateY(-2px);
 }
@@ -241,6 +246,13 @@ h1 span {
   margin: 10px 0 0;
   font-size: clamp(1.45rem, 4vw, 2.2rem);
   line-height: 1.3;
+}
+
+.section-head-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
 }
 
 .grid {
@@ -370,6 +382,11 @@ h1 span {
   padding: 16px 18px 18px;
 }
 
+.project-summary {
+  margin: 0 0 10px;
+  color: var(--ink-soft);
+}
+
 .project-body .badge {
   margin-bottom: 8px;
 }
@@ -384,11 +401,40 @@ h1 span {
   padding-left: 18px;
 }
 
+.project-links {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.project-links span {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.project-links a,
+.project-links .link-chip {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.82rem;
+  color: var(--ink);
+  background: #fff;
+}
+
 .inline-figures {
   margin-top: 12px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+}
+
+.inline-figures.one {
+  grid-template-columns: 1fr;
 }
 
 .inline-figures.two {
@@ -407,7 +453,8 @@ h1 span {
   display: block;
   width: 100%;
   height: 110px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #ebf0ee;
 }
 
 .compact-cards ul {
@@ -494,6 +541,23 @@ h1 span {
   gap: 12px;
 }
 
+.pub-trigger {
+  cursor: pointer;
+}
+
+.pub-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.pub-extra.is-hidden {
+  display: none;
+}
+
+.pub-toggle {
+  margin-top: 16px;
+}
+
 .pub-item p {
   margin: 0;
   color: var(--ink-soft);
@@ -507,6 +571,107 @@ h1 span {
 
 .plain-list.two-col {
   columns: 2;
+}
+
+.education-card {
+  padding: 28px;
+}
+
+.education-card h3 {
+  margin: 0;
+}
+
+.education-card p {
+  margin: 6px 0 18px;
+  color: var(--ink-soft);
+}
+
+.education-card p:last-child {
+  margin-bottom: 0;
+}
+
+.emphasis-card {
+  margin-top: 20px;
+}
+
+.emphasis-card p {
+  margin: 6px 0 0;
+  color: var(--ink-soft);
+}
+
+.blda-grid {
+  margin-top: 16px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 30;
+}
+
+.modal.open {
+  display: block;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 14, 15, 0.56);
+}
+
+.modal-dialog {
+  position: relative;
+  width: min(760px, calc(100% - 28px));
+  margin: min(70px, 8vh) auto;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 28px 54px rgba(0, 0, 0, 0.24);
+  padding: 18px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-dialog img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  background: #ebf0ee;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.modal-meta {
+  margin: 12px 0 6px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.modal-dialog h3 {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.modal-dialog p {
+  margin: 10px 0 0;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .contact {
@@ -586,6 +751,11 @@ h1 span {
   .inline-figures.two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .section-head-inline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 720px) {
@@ -631,6 +801,11 @@ h1 span {
   .inline-figures,
   .inline-figures.two {
     grid-template-columns: 1fr;
+  }
+
+  .modal-dialog {
+    margin: 20px auto;
+    padding: 14px;
   }
 
   .figure-grid,

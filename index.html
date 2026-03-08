@@ -22,6 +22,7 @@
         <a href="#snapshot">Project Snapshot</a>
         <a href="#experience">Experience</a>
         <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
         <a href="projects.html">Project Details ↗</a>
       </nav>
@@ -82,9 +83,12 @@
     </section>
 
     <section id="snapshot" class="section reveal">
-      <div class="section-head">
-        <p>Project Snapshot</p>
-        <h2>메인 페이지에는 요약만 담았습니다</h2>
+      <div class="section-head section-head-inline">
+        <div>
+          <p>Project Snapshot</p>
+          <h2>주요 프로젝트</h2>
+        </div>
+        <a class="btn btn-ghost btn-sm" href="projects.html">프로젝트 상세 페이지 열기</a>
       </div>
       <div class="snapshot-grid">
         <article class="snapshot-card featured">
@@ -125,9 +129,6 @@
           <a href="projects.html#p-attr">상세 보기</a>
         </article>
       </div>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="projects.html">프로젝트 상세 페이지 열기</a>
-      </div>
     </section>
 
     <section id="experience" class="section reveal">
@@ -166,44 +167,166 @@
         <h2>논문 및 발표</h2>
       </div>
       <div class="pub-list">
-        <article class="pub-item">
+        <article
+          class="pub-item pub-trigger"
+          role="button"
+          tabindex="0"
+          data-title="PersonaPlugin: A Multi-Source Persona Framework for LLM Personalization in Telecommunications"
+          data-meta="ICLR 2026 Workshop: Agentic AI in the Wild · 2026년 3월 7일"
+          data-desc="통화·앱·위치 실데이터 기반 페르소나를 AI 에이전트에 동적으로 결합(Plug-in)해 상용 환경 개인화 성능을 24% 향상시킨 프레임워크입니다."
+          data-image="figures/iclr2026_figure1.png"
+          data-url="projects.html#p-ixio"
+          data-url-label="프로젝트 상세 보기"
+        >
           <h3>PersonaPlugin (ICLR 2026 Workshop)</h3>
-          <p>LLM 초개인화 프레임워크</p>
+          <p>다중 소스 신호를 결합한 LLM 개인화 프레임워크 연구/발표</p>
         </article>
-        <article class="pub-item">
+        <article
+          class="pub-item pub-trigger"
+          role="button"
+          tabindex="0"
+          data-title="ATTR: An Adaptable and Trustworthy Targeting Recommendation Framework under Real-World Constraints"
+          data-meta="CIKM Workshop: Human-Centric AI · 2025"
+          data-desc="단순 예측 정확도가 아니라 Uplift 중심으로 타겟팅 효과를 검증하는 인과 추론 기반 추천 프레임워크를 제안했습니다."
+          data-image="figures/cikm2025_figure1.png"
+          data-url="https://xai.kaist.ac.kr/Workshop/hcai2025/accepted-papers"
+          data-url-label="워크숍 Accepted Papers"
+        >
           <h3>ATTR (CIKM 2025 Workshop)</h3>
-          <p>인과 추론 기반 타겟팅 프레임워크</p>
+          <p>실서비스 제약을 반영한 신뢰 가능한 타겟팅 추천 프레임워크</p>
         </article>
-        <article class="pub-item">
-          <h3>IEEE BigData 2024 / Eye 2023 / EJE 2024</h3>
-          <p>추천 시스템 및 의료 통계 연구 다수</p>
+        <article
+          class="pub-item pub-trigger"
+          role="button"
+          tabindex="0"
+          data-title="Presented Poster at LG Tech Conference 2025"
+          data-meta="LG Tech Conference · 2025"
+          data-desc="AI 추천·개인화 프로젝트 성과를 포스터로 정리해 현업/연구 조직 대상 기술 확산 발표를 수행했습니다."
+          data-image="figures/koshis_figure1.jpeg"
+          data-url="https://www.dizzotv.com/site/data/html_dir/2025/04/03/2025040380075.html"
+          data-url-label="행사 안내 링크"
+        >
+          <h3>Presented Poster at LG Tech Conference 2025</h3>
+          <p>LG Science Park 기술 컨퍼런스 포스터 발표</p>
+        </article>
+        <article
+          class="pub-item pub-trigger pub-extra is-hidden"
+          role="button"
+          tabindex="0"
+          data-title="Statin Dose Trajectories and Risk of Graves’ Orbitopathy in Patients with Graves’ Disease Using Clustering Algorithm"
+          data-meta="Journal of Health Informatics and Statistics · 2025"
+          data-desc="100만 명 규모 의료 빅데이터에서 약물 복용 궤적을 군집화하고, 특정 군집의 질환 위험 차이를 통계적으로 검증했습니다."
+          data-image="figures/cau_graves_figure1.png"
+          data-url="https://e-jhis.org/journal/view.php?doi=10.21032/jhis.2025.50.1.104"
+          data-url-label="저널 원문"
+        >
+          <h3>Statin Dose Trajectories... (JHIS 2025)</h3>
+          <p>클러스터링 기반 약물 궤적 분석으로 GO 위험도 차이 검증</p>
+        </article>
+        <article
+          class="pub-item pub-trigger pub-extra is-hidden"
+          role="button"
+          tabindex="0"
+          data-title="A Novel Hybrid Architectures for Overcoming Sparse Data in Subscription Product Recommendation Systems"
+          data-meta="IEEE Big Data · 2024"
+          data-desc="Wide & Deep과 XGBoost 결합 아키텍처로 추천 데이터 희소성 문제를 완화하고 CTR/매출 개선 가능성을 보였습니다."
+          data-image="figures/ieee2024_1.png"
+          data-url="https://www.researchgate.net/publication/388095155_A_Novel_Hybrid_Architectures_for_Overcoming_Sparse_Data_in_Subscription_Product_Recommendation_Systems"
+          data-url-label="논문 링크"
+        >
+          <h3>A Novel Hybrid Architectures... (IEEE Big Data 2024)</h3>
+          <p>구독상품 추천의 Sparse Data 한계를 보완한 하이브리드 모델</p>
+        </article>
+        <article
+          class="pub-item pub-trigger pub-extra is-hidden"
+          role="button"
+          tabindex="0"
+          data-title="Increased risk of diabetes mellitus and hyperlipidemia in patients with differentiated thyroid cancer"
+          data-meta="European Journal of Endocrinology · 2024"
+          data-desc="국가 코호트 분석을 통해 갑상선암 생존자의 당뇨·고지혈증 위험 증가를 계량적으로 제시했습니다."
+          data-image="figures/paper_eje_figure1.png"
+          data-url="https://academic.oup.com/ejendo/article-abstract/190/3/248/7635873?redirectedFrom=fulltext"
+          data-url-label="저널 링크"
+        >
+          <h3>Increased risk of diabetes mellitus... (EJE 2024)</h3>
+          <p>갑상선암 생존자 대사질환 위험도에 대한 대규모 코호트 연구</p>
+        </article>
+        <article
+          class="pub-item pub-trigger pub-extra is-hidden"
+          role="button"
+          tabindex="0"
+          data-title="Lecturer, Data Analysis using AI Agents"
+          data-meta="Chung-Ang University Graduate School · 2024-Present"
+          data-desc="AI Agent 기반 데이터 분석 실습 강의를 통해 프롬프트 설계, 자동화 파이프라인, 분석 실무 적용을 교육하고 있습니다."
+          data-image="figures/smb_figure1.jpg"
+          data-url="https://graduate.cau.ac.kr/"
+          data-url-label="중앙대 대학원"
+        >
+          <h3>Lecturer, Data Analysis using AI Agents</h3>
+          <p>중앙대학교 대학원 대상 AI Agent 데이터분석 강의</p>
+        </article>
+        <article
+          class="pub-item pub-trigger pub-extra is-hidden"
+          role="button"
+          tabindex="0"
+          data-title="Delivered Lecture at LG Aimers Mentoring Day"
+          data-meta="LG AI Research · 2023"
+          data-desc="LG Aimers 멘토링 데이에서 문제 정의, 피처 엔지니어링, 모델 검증 실무를 주제로 기술 강연을 진행했습니다."
+          data-image="figures/venture_figure1.jpeg"
+          data-url="https://n.news.naver.com/mnews/article/030/0003153350?sid=105"
+          data-url-label="기사 링크"
+        >
+          <h3>Delivered Lecture at LG Aimers Mentoring Day</h3>
+          <p>LG AI Research 행사 강연</p>
+        </article>
+        <article
+          class="pub-item pub-trigger pub-extra is-hidden"
+          role="button"
+          tabindex="0"
+          data-title="Sex-specific risk factors associated with graves’ orbitopathy in Korean patients with newly diagnosed graves’ disease"
+          data-meta="Eye · 2023"
+          data-desc="신규 진단 Graves’ disease 환자 코호트에서 성별에 따른 GO 위험 요인의 차이를 통계적으로 규명했습니다."
+          data-image="figures/paper_eye_figure1.png"
+          data-url="https://www.nature.com/articles/s41433-023-02513-z"
+          data-url-label="저널 링크"
+        >
+          <h3>Sex-specific risk factors... (Eye 2023)</h3>
+          <p>성별 특이 위험요인을 규명한 NHIS 기반 GO 연구</p>
         </article>
       </div>
+      <button id="pub-toggle" class="btn btn-ghost pub-toggle" type="button" aria-expanded="false">더보기</button>
+    </section>
+
+    <section id="education" class="section reveal">
+      <div class="section-head">
+        <p>Education</p>
+        <h2>학력</h2>
+      </div>
+      <article class="card education-card">
+        <h3>중앙대학교 통계학 석사</h3>
+        <p>2021.09 - 2023.08 · Biostatistics & Lifetime Data Analysis Lab</p>
+        <h3>중앙대학교 응용통계학/경제학 학사</h3>
+        <p>2013.03 - 2020.02</p>
+      </article>
     </section>
 
     <section class="section reveal">
-      <div class="grid two">
-        <article class="card">
-          <h3>학력</h3>
-          <ul class="plain-list">
-            <li>중앙대학교 통계학 석사 (2021.09 - 2023.08)</li>
-            <li>중앙대학교 응용통계학/경제학 학사 (2013.03 - 2020.02)</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>자격증</h3>
-          <ul class="plain-list two-col">
-            <li>빅데이터분석기사</li>
-            <li>Google Tensorflow Developer Certificate</li>
-            <li>GAIQ</li>
-            <li>SQLD</li>
-            <li>ADsP</li>
-            <li>사회조사분석사 2급</li>
-            <li>컴퓨터활용능력 1급</li>
-            <li>SAS Certified Base Programmer</li>
-          </ul>
-        </article>
+      <div class="section-head">
+        <p>Certifications</p>
+        <h2>자격증</h2>
       </div>
+      <article class="card">
+        <ul class="plain-list two-col">
+          <li>빅데이터분석기사</li>
+          <li>Google Tensorflow Developer Certificate</li>
+          <li>GAIQ</li>
+          <li>SQLD</li>
+          <li>ADsP</li>
+          <li>사회조사분석사 2급</li>
+          <li>컴퓨터활용능력 1급</li>
+          <li>SAS Certified Base Programmer</li>
+        </ul>
+      </article>
     </section>
 
     <section id="contact" class="section contact reveal">
@@ -222,6 +345,18 @@
       <a href="#top">Back to top</a>
     </div>
   </footer>
+
+  <div id="pub-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pub-modal-title">
+      <button class="modal-close" type="button" aria-label="닫기" data-close-modal="true">×</button>
+      <img id="pub-modal-image" src="" alt="논문 및 발표 관련 이미지" loading="lazy" />
+      <p id="pub-modal-meta" class="modal-meta"></p>
+      <h3 id="pub-modal-title"></h3>
+      <p id="pub-modal-desc"></p>
+      <a id="pub-modal-link" class="btn btn-primary" href="#" target="_blank" rel="noreferrer">관련 링크</a>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
