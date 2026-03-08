@@ -471,6 +471,61 @@ h1 span {
   gap: 8px;
 }
 
+.inline-figures.inline-carousel {
+  display: block;
+  position: relative;
+  padding: 0 28px;
+}
+
+.inline-figures-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--inline-visible, 4) - 1) * 8px) / var(--inline-visible, 4));
+  gap: 8px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.inline-figures-track::-webkit-scrollbar {
+  display: none;
+}
+
+.inline-figures.inline-carousel a {
+  scroll-snap-align: start;
+}
+
+.inline-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.inline-carousel-nav.prev {
+  left: -2px;
+}
+
+.inline-carousel-nav.next {
+  right: -2px;
+}
+
+.inline-carousel-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
 .inline-figures a {
   display: block;
   border: 1px solid var(--line);

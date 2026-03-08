@@ -252,7 +252,94 @@ const closeFigureModal = () => {
   document.body.classList.remove("modal-open");
 };
 
+const setupInlineFigureCarousels = () => {
+  const groups = document.querySelectorAll(".inline-figures");
+  if (groups.length === 0) {
+    return;
+  }
+
+  groups.forEach((group) => {
+    const links = Array.from(group.querySelectorAll(":scope > a[href]"));
+    if (links.length <= 4) {
+      return;
+    }
+
+    const track = document.createElement("div");
+    track.className = "inline-figures-track";
+    links.forEach((link) => track.appendChild(link));
+
+    const prev = document.createElement("button");
+    prev.type = "button";
+    prev.className = "inline-carousel-nav prev";
+    prev.setAttribute("aria-label", "이전 이미지");
+    prev.textContent = "‹";
+
+    const next = document.createElement("button");
+    next.type = "button";
+    next.className = "inline-carousel-nav next";
+    next.setAttribute("aria-label", "다음 이미지");
+    next.textContent = "›";
+
+    group.classList.add("inline-carousel");
+    group.appendChild(track);
+    group.appendChild(prev);
+    group.appendChild(next);
+
+    const updateVisibleCount = () => {
+      let visible = 4;
+      if (window.matchMedia("(max-width: 720px)").matches) {
+        visible = 2;
+      } else if (window.matchMedia("(max-width: 960px)").matches) {
+        visible = 3;
+      }
+      group.style.setProperty("--inline-visible", String(visible));
+    };
+
+    const getStep = () => {
+      const first = track.querySelector("a");
+      if (!first) {
+        return 0;
+      }
+      const styles = window.getComputedStyle(track);
+      const gap = Number.parseFloat(styles.columnGap || styles.gap || "8") || 8;
+      return first.getBoundingClientRect().width + gap;
+    };
+
+    const updateNavState = () => {
+      const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+      prev.disabled = track.scrollLeft <= 1;
+      next.disabled = track.scrollLeft >= maxLeft - 1;
+    };
+
+    prev.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      track.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+
+    next.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      track.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+
+    track.addEventListener("scroll", () => {
+      window.requestAnimationFrame(updateNavState);
+    });
+
+    window.addEventListener("resize", () => {
+      updateVisibleCount();
+      updateNavState();
+    });
+
+    updateVisibleCount();
+    updateNavState();
+  });
+};
+
 if (figureModal) {
+  setupInlineFigureCarousels();
+
   document.querySelectorAll(".inline-figures").forEach((group) => {
     const links = Array.from(group.querySelectorAll("a[href]"));
     if (links.length === 0) {
