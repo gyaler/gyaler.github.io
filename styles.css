@@ -857,6 +857,82 @@ body.modal-open {
   transform: translateY(0);
 }
 
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .bg-orb,
+  .site-header,
+  .hero-cta,
+  #pub-toggle,
+  .modal,
+  #figure-modal {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero {
+    padding: 0 0 14px;
+  }
+
+  .section {
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-shadow: none;
+    background: #fff;
+  }
+
+  .card,
+  .pub-item,
+  .timeline-item,
+  .project-card,
+  .snapshot-card {
+    box-shadow: none !important;
+    border-color: #d9d9d9 !important;
+    background: #fff !important;
+  }
+
+  .badge,
+  .hero-tags span,
+  .project-links a,
+  .project-links .link-chip,
+  .pub-item .pub-meta {
+    background: #f4f4f4 !important;
+    border-color: #d2d2d2 !important;
+    color: #222 !important;
+    box-shadow: none !important;
+  }
+
+  .inline-figures,
+  .figure-grid {
+    display: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
 @media (max-width: 960px) {
   .grid.two {
     grid-template-columns: 1fr;
