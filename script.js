@@ -5,19 +5,24 @@ if (yearEl) {
 
 const revealTargets = document.querySelectorAll(".reveal");
 if (revealTargets.length > 0) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.18 }
-  );
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
 
-  revealTargets.forEach((target) => observer.observe(target));
+    revealTargets.forEach((target) => observer.observe(target));
+  } else {
+    // Fallback for older browsers where IntersectionObserver is unavailable.
+    revealTargets.forEach((target) => target.classList.add("in-view"));
+  }
 }
 
 const pubToggleBtn = document.getElementById("pub-toggle");
@@ -83,7 +88,6 @@ const closePubModal = () => {
 
 if (detailTriggers.length > 0) {
   detailTriggers.forEach((trigger) => {
-    trigger.addEventListener("click", () => openPubModal(trigger));
     trigger.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
@@ -92,6 +96,14 @@ if (detailTriggers.length > 0) {
     });
   });
 }
+
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest(".detail-trigger");
+  if (!trigger) {
+    return;
+  }
+  openPubModal(trigger);
+});
 
 if (pubModal) {
   pubModal.addEventListener("click", (event) => {
