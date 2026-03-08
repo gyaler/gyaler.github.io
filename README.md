@@ -17,7 +17,7 @@ python -m http.server 5500
 cd c:\work\portfolio
 git add .
 git commit -m "Add portfolio landing page"
-git push -u origin main
+git push -u origin master
 ```
 
-GitHub Pages 사용자 사이트는 `main` 브랜치 루트의 `index.html`을 바로 서빙합니다.
+GitHub Pages 사용자 사이트는 `master` 브랜치 루트의 `index.html`을 바로 서빙합니다.

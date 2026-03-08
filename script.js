@@ -42,9 +42,74 @@ const pubModalMeta = document.getElementById("pub-modal-meta");
 const pubModalDesc = document.getElementById("pub-modal-desc");
 const pubModalImage = document.getElementById("pub-modal-image");
 const pubModalLink = document.getElementById("pub-modal-link");
+const pubModalDialog = pubModal ? pubModal.querySelector(".modal-dialog") : null;
 const detailTriggers = document.querySelectorAll(".detail-trigger");
 const imageProbeCache = new Map();
 let pubModalRequestId = 0;
+let lastFocusedBeforePubModal = null;
+
+const focusableSelector = [
+  "a[href]",
+  "button:not([disabled])",
+  "textarea:not([disabled])",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "[tabindex]:not([tabindex='-1'])",
+].join(",");
+
+const getFocusableElements = (container) => {
+  if (!container) {
+    return [];
+  }
+  return Array.from(container.querySelectorAll(focusableSelector)).filter((el) => {
+    if (el.getAttribute("aria-hidden") === "true") {
+      return false;
+    }
+    return el.offsetWidth > 0 || el.offsetHeight > 0 || el.getClientRects().length > 0;
+  });
+};
+
+const focusFirstElement = (container) => {
+  const [first] = getFocusableElements(container);
+  if (first) {
+    first.focus();
+  }
+};
+
+const restoreFocus = (el) => {
+  if (el && typeof el.focus === "function") {
+    el.focus();
+  }
+};
+
+const trapFocusInModal = (event, container) => {
+  if (event.key !== "Tab") {
+    return;
+  }
+  const focusables = getFocusableElements(container);
+  if (focusables.length === 0) {
+    event.preventDefault();
+    return;
+  }
+
+  const first = focusables[0];
+  const last = focusables[focusables.length - 1];
+  const active = document.activeElement;
+  const isInside = container ? container.contains(active) : false;
+
+  if (event.shiftKey) {
+    if (active === first || !isInside) {
+      event.preventDefault();
+      last.focus();
+    }
+    return;
+  }
+
+  if (active === last || !isInside) {
+    event.preventDefault();
+    first.focus();
+  }
+};
 
 const probeImage = (src) => {
   if (!src) {
@@ -113,6 +178,8 @@ const openPubModal = async (triggerEl) => {
     return;
   }
 
+  lastFocusedBeforePubModal = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+
   const requestId = ++pubModalRequestId;
 
   const {
@@ -144,16 +211,20 @@ const openPubModal = async (triggerEl) => {
   pubModal.classList.add("open");
   pubModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
+  focusFirstElement(pubModalDialog);
 };
 
 const closePubModal = () => {
   if (!pubModal || !pubModalImage) {
     return;
   }
+  const restoreTarget = lastFocusedBeforePubModal;
+  lastFocusedBeforePubModal = null;
   pubModal.classList.remove("open");
   pubModal.setAttribute("aria-hidden", "true");
   pubModalImage.src = "";
   document.body.classList.remove("modal-open");
+  restoreFocus(restoreTarget);
 };
 
 if (detailTriggers.length > 0) {
@@ -185,9 +256,16 @@ if (pubModal) {
 }
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && pubModal && pubModal.classList.contains("open")) {
-    closePubModal();
+  if (!pubModal || !pubModal.classList.contains("open")) {
+    return;
   }
+
+  if (event.key === "Escape") {
+    closePubModal();
+    return;
+  }
+
+  trapFocusInModal(event, pubModalDialog);
 });
 
 const figureModal = document.getElementById("figure-modal");
@@ -197,10 +275,12 @@ const figureModalCounter = document.getElementById("figure-modal-counter");
 const figurePrevBtn = document.getElementById("figure-prev");
 const figureNextBtn = document.getElementById("figure-next");
 const figureStage = document.getElementById("figure-stage");
+const figureModalDialog = figureModal ? figureModal.querySelector(".modal-dialog") : null;
 
 let figureItems = [];
 let figureIndex = 0;
 let touchStartX = 0;
+let lastFocusedBeforeFigureModal = null;
 
 const renderFigureModal = () => {
   if (!figureModalImage || !figureModalCaption || !figureModalCounter || figureItems.length === 0) {
@@ -234,22 +314,27 @@ const openFigureModal = (items, startIndex) => {
   if (!figureModal || !figureModalImage || items.length === 0) {
     return;
   }
+  lastFocusedBeforeFigureModal = document.activeElement instanceof HTMLElement ? document.activeElement : null;
   figureItems = items;
   figureIndex = startIndex;
   renderFigureModal();
   figureModal.classList.add("open");
   figureModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
+  focusFirstElement(figureModalDialog);
 };
 
 const closeFigureModal = () => {
   if (!figureModal || !figureModalImage) {
     return;
   }
+  const restoreTarget = lastFocusedBeforeFigureModal;
+  lastFocusedBeforeFigureModal = null;
   figureModal.classList.remove("open");
   figureModal.setAttribute("aria-hidden", "true");
   figureModalImage.src = "";
   document.body.classList.remove("modal-open");
+  restoreFocus(restoreTarget);
 };
 
 const setupInlineFigureCarousels = () => {
@@ -399,6 +484,11 @@ document.addEventListener("keydown", (event) => {
 
   if (event.key === "Escape") {
     closeFigureModal();
+    return;
+  }
+
+  if (event.key === "Tab") {
+    trapFocusInModal(event, figureModalDialog);
     return;
   }
 
