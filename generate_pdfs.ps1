@@ -14,11 +14,11 @@ if (-not $edge) {
 
 $jobs = @(
   @{
-    Html = Join-Path $repoRoot "index.html"
+    Html = Join-Path $repoRoot "cv_print.html"
     Pdf = Join-Path $repoRoot "KangJinmo_CV_Main.pdf"
   },
   @{
-    Html = Join-Path $repoRoot "projects.html"
+    Html = Join-Path $repoRoot "projects_print.html"
     Pdf = Join-Path $repoRoot "KangJinmo_CV_Projects.pdf"
   }
 )
