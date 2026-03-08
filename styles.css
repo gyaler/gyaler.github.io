@@ -594,6 +594,19 @@ h1 span {
   font-size: 0.92rem;
 }
 
+.pub-item .pub-meta {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.pub-item .pub-desc {
+  margin-top: 6px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
 .plain-list {
   margin: 0;
   padding-left: 18px;
