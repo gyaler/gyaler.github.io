@@ -374,7 +374,7 @@ h1 span {
 }
 
 .project-card[id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 72px;
 }
 
 .media-frame {
@@ -441,21 +441,17 @@ h1 span {
 
 .inline-figures {
   margin-top: 12px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 8px;
-}
-
-.inline-figures.one {
-  grid-template-columns: 1fr;
-}
-
-.inline-figures.two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .inline-figures a {
   display: block;
+  flex: 0 0 clamp(210px, calc((100% - 16px) / 3), 320px);
+  max-width: clamp(210px, calc((100% - 16px) / 3), 320px);
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
@@ -769,9 +765,9 @@ body.modal-open {
     height: 220px;
   }
 
-  .inline-figures,
-  .inline-figures.two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .inline-figures a {
+    flex-basis: calc((100% - 8px) / 2);
+    max-width: calc((100% - 8px) / 2);
   }
 
   .section-head-inline {
@@ -820,9 +816,9 @@ body.modal-open {
     border-radius: 18px;
   }
 
-  .inline-figures,
-  .inline-figures.two {
-    grid-template-columns: 1fr;
+  .inline-figures a {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 
   .modal-dialog {

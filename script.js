@@ -137,19 +137,28 @@ const scrollToHashTargetTop = () => {
   }
 
   const header = document.querySelector(".site-header");
-  const headerOffset = header ? header.getBoundingClientRect().height + 16 : 16;
+  const headerOffset = header ? Math.max(0, header.getBoundingClientRect().height + 4) : 0;
   const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
   window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
 };
 
+const alignHashWithRetries = () => {
+  if (!window.location.hash) {
+    return;
+  }
+
+  scrollToHashTargetTop();
+  [80, 220, 420, 800].forEach((delay) => {
+    window.setTimeout(scrollToHashTargetTop, delay);
+  });
+};
+
 if (window.location.hash) {
-  requestAnimationFrame(scrollToHashTargetTop);
-  window.addEventListener(
-    "load",
-    () => {
-      scrollToHashTargetTop();
-      setTimeout(scrollToHashTargetTop, 120);
-    },
-    { once: true }
-  );
+  requestAnimationFrame(alignHashWithRetries);
 }
+
+window.addEventListener("load", alignHashWithRetries);
+window.addEventListener("pageshow", alignHashWithRetries);
+window.addEventListener("hashchange", () => {
+  requestAnimationFrame(alignHashWithRetries);
+});
