@@ -414,6 +414,33 @@ h1 span {
   color: var(--ink-soft);
 }
 
+.project-body ul li + li {
+  margin-top: 6px;
+}
+
+.txt-strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.txt-accent {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.txt-warm {
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+.txt-uline {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  text-decoration-color: currentColor;
+}
+
 .project-body > .badge {
   margin-bottom: 8px;
 }

@@ -345,9 +345,11 @@ const setupInlineFigureCarousels = () => {
 
   groups.forEach((group) => {
     const links = Array.from(group.querySelectorAll(":scope > a[href]"));
-    if (links.length <= 4) {
+    const forceCarousel = group.classList.contains("force-carousel");
+    if ((!forceCarousel && links.length <= 4) || (forceCarousel && links.length <= 1)) {
       return;
     }
+    const linkCount = links.length;
 
     const track = document.createElement("div");
     track.className = "inline-figures-track";
@@ -371,11 +373,16 @@ const setupInlineFigureCarousels = () => {
     group.appendChild(next);
 
     const updateVisibleCount = () => {
-      let visible = 4;
+      let visible = forceCarousel ? 3 : 4;
       if (window.matchMedia("(max-width: 720px)").matches) {
-        visible = 2;
+        visible = forceCarousel ? 1 : 2;
       } else if (window.matchMedia("(max-width: 960px)").matches) {
-        visible = 3;
+        visible = forceCarousel ? 2 : 3;
+      }
+      if (forceCarousel) {
+        visible = Math.min(visible, Math.max(1, linkCount - 1));
+      } else {
+        visible = Math.min(visible, linkCount);
       }
       group.style.setProperty("--inline-visible", String(visible));
     };
@@ -392,6 +399,14 @@ const setupInlineFigureCarousels = () => {
 
     const updateNavState = () => {
       const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+      const hasOverflow = maxLeft > 1;
+      prev.hidden = !hasOverflow;
+      next.hidden = !hasOverflow;
+      if (!hasOverflow) {
+        prev.disabled = true;
+        next.disabled = true;
+        return;
+      }
       prev.disabled = track.scrollLeft <= 1;
       next.disabled = track.scrollLeft >= maxLeft - 1;
     };
