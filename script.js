@@ -120,6 +120,141 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const figureModal = document.getElementById("figure-modal");
+const figureModalImage = document.getElementById("figure-modal-image");
+const figureModalCaption = document.getElementById("figure-modal-caption");
+const figureModalCounter = document.getElementById("figure-modal-counter");
+const figurePrevBtn = document.getElementById("figure-prev");
+const figureNextBtn = document.getElementById("figure-next");
+const figureStage = document.getElementById("figure-stage");
+
+let figureItems = [];
+let figureIndex = 0;
+let touchStartX = 0;
+
+const renderFigureModal = () => {
+  if (!figureModalImage || !figureModalCaption || !figureModalCounter || figureItems.length === 0) {
+    return;
+  }
+
+  const current = figureItems[figureIndex];
+  figureModalImage.src = current.src;
+  figureModalImage.alt = current.alt || `프로젝트 이미지 ${figureIndex + 1}`;
+  figureModalCaption.textContent = current.alt || "프로젝트 이미지";
+  figureModalCounter.textContent = `${figureIndex + 1} / ${figureItems.length}`;
+
+  const hasMultiple = figureItems.length > 1;
+  if (figurePrevBtn) {
+    figurePrevBtn.style.display = hasMultiple ? "inline-flex" : "none";
+  }
+  if (figureNextBtn) {
+    figureNextBtn.style.display = hasMultiple ? "inline-flex" : "none";
+  }
+};
+
+const moveFigure = (delta) => {
+  if (figureItems.length === 0) {
+    return;
+  }
+  figureIndex = (figureIndex + delta + figureItems.length) % figureItems.length;
+  renderFigureModal();
+};
+
+const openFigureModal = (items, startIndex) => {
+  if (!figureModal || !figureModalImage || items.length === 0) {
+    return;
+  }
+  figureItems = items;
+  figureIndex = startIndex;
+  renderFigureModal();
+  figureModal.classList.add("open");
+  figureModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+};
+
+const closeFigureModal = () => {
+  if (!figureModal || !figureModalImage) {
+    return;
+  }
+  figureModal.classList.remove("open");
+  figureModal.setAttribute("aria-hidden", "true");
+  figureModalImage.src = "";
+  document.body.classList.remove("modal-open");
+};
+
+if (figureModal) {
+  document.querySelectorAll(".inline-figures").forEach((group) => {
+    const links = Array.from(group.querySelectorAll("a[href]"));
+    if (links.length === 0) {
+      return;
+    }
+
+    const items = links.map((link) => {
+      const img = link.querySelector("img");
+      return {
+        src: link.getAttribute("href") || "",
+        alt: img ? img.alt : "",
+      };
+    });
+
+    links.forEach((link, idx) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        openFigureModal(items, idx);
+      });
+    });
+  });
+
+  if (figurePrevBtn) {
+    figurePrevBtn.addEventListener("click", () => moveFigure(-1));
+  }
+
+  if (figureNextBtn) {
+    figureNextBtn.addEventListener("click", () => moveFigure(1));
+  }
+
+  figureModal.addEventListener("click", (event) => {
+    const closeTarget = event.target.closest("[data-close-figure-modal='true']");
+    if (closeTarget) {
+      closeFigureModal();
+    }
+  });
+
+  if (figureStage) {
+    figureStage.addEventListener("touchstart", (event) => {
+      touchStartX = event.changedTouches[0].clientX;
+    });
+
+    figureStage.addEventListener("touchend", (event) => {
+      const deltaX = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(deltaX) < 40) {
+        return;
+      }
+      moveFigure(deltaX > 0 ? -1 : 1);
+    });
+  }
+}
+
+document.addEventListener("keydown", (event) => {
+  if (!figureModal || !figureModal.classList.contains("open")) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    closeFigureModal();
+    return;
+  }
+
+  if (event.key === "ArrowLeft") {
+    moveFigure(-1);
+    return;
+  }
+
+  if (event.key === "ArrowRight") {
+    moveFigure(1);
+  }
+});
+
 const scrollToHashTargetTop = () => {
   if (!window.location.hash) {
     return;

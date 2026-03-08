@@ -693,6 +693,78 @@ h1 span {
   margin-top: 16px;
 }
 
+#figure-modal .figure-modal-dialog {
+  width: min(1080px, calc(100% - 24px));
+  padding: 16px 54px 14px;
+}
+
+#figure-modal .modal-close {
+  top: 12px;
+  right: 12px;
+}
+
+.figure-stage {
+  margin-top: 4px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ebf0ee;
+  min-height: min(70vh, 640px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: pan-y;
+}
+
+#figure-modal .modal-dialog img {
+  width: 100%;
+  max-height: min(68vh, 720px);
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.figure-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font-size: 1.55rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.figure-prev {
+  left: 10px;
+}
+
+.figure-next {
+  right: 10px;
+}
+
+.figure-modal-counter {
+  margin: 10px 0 0;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.figure-modal-caption {
+  margin: 4px 0 0;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
 body.modal-open {
   overflow: hidden;
 }
@@ -835,6 +907,20 @@ body.modal-open {
   .modal-dialog {
     margin: 20px auto;
     padding: 14px;
+  }
+
+  #figure-modal .figure-modal-dialog {
+    padding: 12px 44px 12px;
+  }
+
+  .figure-nav {
+    width: 34px;
+    height: 34px;
+    font-size: 1.35rem;
+  }
+
+  .figure-stage {
+    min-height: min(56vh, 420px);
   }
 
   .figure-grid,
