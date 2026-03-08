@@ -198,7 +198,7 @@ h1 span {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -310,6 +310,15 @@ h1 span {
   background: var(--surface-strong);
   padding: 16px;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.snapshot-trigger {
+  cursor: pointer;
+}
+
+.snapshot-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .snapshot-card:hover {
@@ -714,8 +723,13 @@ body.modal-open {
 }
 
 .footer-wrap a {
-  color: var(--ink-soft);
+  color: var(--ink);
   text-decoration: none;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-weight: 700;
 }
 
 .reveal {

@@ -37,7 +37,7 @@ const pubModalMeta = document.getElementById("pub-modal-meta");
 const pubModalDesc = document.getElementById("pub-modal-desc");
 const pubModalImage = document.getElementById("pub-modal-image");
 const pubModalLink = document.getElementById("pub-modal-link");
-const pubTriggers = document.querySelectorAll(".pub-trigger");
+const detailTriggers = document.querySelectorAll(".detail-trigger");
 
 const openPubModal = (triggerEl) => {
   if (!pubModal || !pubModalTitle || !pubModalMeta || !pubModalDesc || !pubModalImage || !pubModalLink) {
@@ -81,8 +81,8 @@ const closePubModal = () => {
   document.body.classList.remove("modal-open");
 };
 
-if (pubTriggers.length > 0) {
-  pubTriggers.forEach((trigger) => {
+if (detailTriggers.length > 0) {
+  detailTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => openPubModal(trigger));
     trigger.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
