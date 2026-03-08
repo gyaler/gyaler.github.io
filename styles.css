@@ -414,8 +414,19 @@ h1 span {
   color: var(--ink-soft);
 }
 
-.project-body .badge {
+.project-body > .badge {
   margin-bottom: 8px;
+}
+
+.project-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+.project-meta-tags .badge {
+  margin: 0;
 }
 
 .project-body h3 {
