@@ -249,3 +249,44 @@ body {
     text-decoration: none;
   }
 }
+
+.projects-print .section {
+  margin: 6px 0 0;
+  break-inside: auto;
+}
+
+.projects-print .project-block {
+  margin: 0 0 6px;
+  padding: 7px 8px;
+}
+
+.projects-print .project-meta {
+  margin: 0 0 3px;
+}
+
+.projects-print .project-title {
+  margin: 0 0 3px;
+}
+
+.projects-print .bullets {
+  margin: 4px 0 0;
+}
+
+.projects-print .bullets li {
+  margin: 0 0 1px;
+}
+
+.projects-print .section-compact {
+  margin-top: 3px;
+}
+
+.projects-print .section-compact .project-block {
+  margin-bottom: 4px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  break-inside: auto;
+}
+
+.projects-print .footer-note {
+  margin-top: 4px;
+}
