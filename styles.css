@@ -86,6 +86,7 @@ body {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-links a {
@@ -296,6 +297,18 @@ h1 span {
   border-radius: 14px;
   background: var(--surface-strong);
   padding: 16px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.snapshot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(17, 38, 39, 0.1);
+}
+
+.snapshot-card.featured {
+  border-color: rgba(15, 127, 127, 0.45);
+  background: linear-gradient(180deg, rgba(15, 127, 127, 0.1) 0%, #fffdf9 55%);
+  box-shadow: 0 16px 30px rgba(15, 127, 127, 0.2);
 }
 
 .snapshot-card h3 {
@@ -308,6 +321,13 @@ h1 span {
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.93rem;
+}
+
+.snapshot-kpi {
+  margin-top: 10px !important;
+  color: #0a5e5e !important;
+  font-weight: 700;
+  font-size: 0.88rem !important;
 }
 
 .snapshot-card a {
@@ -542,13 +562,12 @@ h1 span {
 
 @media (max-width: 960px) {
   .quick-info,
-  .grid.two,
-  .figure-grid {
+  .grid.two {
     grid-template-columns: 1fr;
   }
 
-  .snapshot-grid {
-    grid-template-columns: 1fr;
+  .figure-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .timeline-item {
@@ -574,19 +593,30 @@ h1 span {
     width: min(1120px, calc(100% - 24px));
   }
 
-  .site-header {
-    position: static;
-  }
-
   .nav-wrap {
-    min-height: auto;
-    padding: 14px 0;
-    flex-direction: column;
-    align-items: flex-start;
+    min-height: 58px;
+    padding: 10px 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
   }
 
   .nav-links {
-    gap: 12px;
+    flex: 1;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 5px 10px;
+    font-size: 0.84rem;
   }
 
   .hero {
@@ -600,6 +630,11 @@ h1 span {
 
   .inline-figures,
   .inline-figures.two {
+    grid-template-columns: 1fr;
+  }
+
+  .figure-grid,
+  .snapshot-grid {
     grid-template-columns: 1fr;
   }
 
