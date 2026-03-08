@@ -43,19 +43,89 @@ const pubModalDesc = document.getElementById("pub-modal-desc");
 const pubModalImage = document.getElementById("pub-modal-image");
 const pubModalLink = document.getElementById("pub-modal-link");
 const detailTriggers = document.querySelectorAll(".detail-trigger");
+const imageProbeCache = new Map();
+let pubModalRequestId = 0;
 
-const openPubModal = (triggerEl) => {
+const probeImage = (src) => {
+  if (!src) {
+    return Promise.resolve(false);
+  }
+  if (imageProbeCache.has(src)) {
+    return imageProbeCache.get(src);
+  }
+
+  const probePromise = new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+    img.src = src;
+  });
+  imageProbeCache.set(src, probePromise);
+  return probePromise;
+};
+
+const uniqueStrings = (items) => [...new Set(items.filter(Boolean))];
+
+const buildRepresentativeCandidates = (dataset) => {
+  const { image = "", imageMain = "", imageBase = "" } = dataset;
+  const candidates = [];
+
+  if (imageMain) {
+    candidates.push(imageMain);
+  }
+
+  if (imageBase) {
+    ["png", "jpg", "jpeg", "webp"].forEach((ext) => {
+      candidates.push(`${imageBase}_main.${ext}`);
+    });
+  }
+
+  if (image) {
+    const matched = image.match(/^(.*?)(?:_(?:\d+|main))?\.(png|jpg|jpeg|webp)$/i);
+    if (matched) {
+      const stem = matched[1];
+      const currentExt = matched[2].toLowerCase();
+      candidates.push(`${stem}_main.${currentExt}`);
+      ["png", "jpg", "jpeg", "webp"].forEach((ext) => {
+        if (ext !== currentExt) {
+          candidates.push(`${stem}_main.${ext}`);
+        }
+      });
+    }
+    candidates.push(image);
+  }
+
+  return uniqueStrings(candidates);
+};
+
+const resolveRepresentativeImage = async (triggerEl) => {
+  const candidates = buildRepresentativeCandidates(triggerEl.dataset);
+  for (const src of candidates) {
+    if (await probeImage(src)) {
+      return src;
+    }
+  }
+  return triggerEl.dataset.image || "";
+};
+
+const openPubModal = async (triggerEl) => {
   if (!pubModal || !pubModalTitle || !pubModalMeta || !pubModalDesc || !pubModalImage || !pubModalLink) {
     return;
   }
+
+  const requestId = ++pubModalRequestId;
 
   const {
     title = "",
     meta = "",
     desc = "",
-    image = "",
     url = "",
   } = triggerEl.dataset;
+
+  const image = await resolveRepresentativeImage(triggerEl);
+  if (requestId !== pubModalRequestId) {
+    return;
+  }
 
   pubModalTitle.textContent = title;
   pubModalMeta.textContent = meta;
