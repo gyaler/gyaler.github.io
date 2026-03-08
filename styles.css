@@ -198,7 +198,7 @@ h1 span {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -222,6 +222,20 @@ h1 span {
   text-decoration: none;
   font-weight: 700;
   word-break: break-all;
+}
+
+.quick-info .download-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: #f8f8f8;
+  background: linear-gradient(135deg, var(--accent), #0c6666);
+  box-shadow: 0 10px 18px rgba(15, 127, 127, 0.24);
+  font-size: 0.9rem;
+  word-break: keep-all;
 }
 
 .section {
