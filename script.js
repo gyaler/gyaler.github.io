@@ -119,3 +119,37 @@ document.addEventListener("keydown", (event) => {
     closePubModal();
   }
 });
+
+const scrollToHashTargetTop = () => {
+  if (!window.location.hash) {
+    return;
+  }
+
+  let target;
+  try {
+    target = document.querySelector(window.location.hash);
+  } catch {
+    return;
+  }
+
+  if (!target) {
+    return;
+  }
+
+  const header = document.querySelector(".site-header");
+  const headerOffset = header ? header.getBoundingClientRect().height + 16 : 16;
+  const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+  window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+};
+
+if (window.location.hash) {
+  requestAnimationFrame(scrollToHashTargetTop);
+  window.addEventListener(
+    "load",
+    () => {
+      scrollToHashTargetTop();
+      setTimeout(scrollToHashTargetTop, 120);
+    },
+    { once: true }
+  );
+}

@@ -373,6 +373,10 @@ h1 span {
   overflow: hidden;
 }
 
+.project-card[id] {
+  scroll-margin-top: 96px;
+}
+
 .media-frame {
   display: block;
   background: #ebf0ee;
