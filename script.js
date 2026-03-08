@@ -345,11 +345,9 @@ const setupInlineFigureCarousels = () => {
 
   groups.forEach((group) => {
     const links = Array.from(group.querySelectorAll(":scope > a[href]"));
-    const forceCarousel = group.classList.contains("force-carousel");
-    if ((!forceCarousel && links.length <= 4) || (forceCarousel && links.length <= 1)) {
+    if (links.length <= 4) {
       return;
     }
-    const linkCount = links.length;
 
     const track = document.createElement("div");
     track.className = "inline-figures-track";
@@ -373,16 +371,11 @@ const setupInlineFigureCarousels = () => {
     group.appendChild(next);
 
     const updateVisibleCount = () => {
-      let visible = forceCarousel ? 3 : 4;
+      let visible = 4;
       if (window.matchMedia("(max-width: 720px)").matches) {
-        visible = forceCarousel ? 1 : 2;
+        visible = 2;
       } else if (window.matchMedia("(max-width: 960px)").matches) {
-        visible = forceCarousel ? 2 : 3;
-      }
-      if (forceCarousel) {
-        visible = Math.min(visible, Math.max(1, linkCount - 1));
-      } else {
-        visible = Math.min(visible, linkCount);
+        visible = 3;
       }
       group.style.setProperty("--inline-visible", String(visible));
     };
