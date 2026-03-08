@@ -50,7 +50,6 @@ const openPubModal = (triggerEl) => {
     desc = "",
     image = "",
     url = "",
-    urlLabel = "관련 링크",
   } = triggerEl.dataset;
 
   pubModalTitle.textContent = title;
@@ -61,7 +60,7 @@ const openPubModal = (triggerEl) => {
 
   if (url) {
     pubModalLink.href = url;
-    pubModalLink.textContent = urlLabel;
+    pubModalLink.textContent = "상세 링크";
     pubModalLink.style.display = "inline-flex";
   } else {
     pubModalLink.style.display = "none";

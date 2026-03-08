@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #f6f2ea;
   --surface: rgba(255, 253, 249, 0.78);
   --surface-strong: #fffdf9;
@@ -668,6 +668,10 @@ h1 span {
 
 .modal-dialog p {
   margin: 10px 0 0;
+}
+
+#pub-modal-link {
+  margin-top: 16px;
 }
 
 body.modal-open {
